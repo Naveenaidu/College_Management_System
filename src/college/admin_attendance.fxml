@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="college.Admin_attendanceController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="850.0">
+         <children>
+            <HBox prefHeight="84.0" prefWidth="847.0" spacing="200.0">
+               <children>
+                  <VBox prefHeight="70.0" prefWidth="388.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="409.0" text="ATTENDANCE DETAILS" textFill="#ee1818" textOverrun="CLIP">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="Home">
+                           <VBox.margin>
+                              <Insets left="20.0" top="-5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="84.0" prefWidth="297.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="35.0" prefWidth="96.0" text="Hello,">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="6.5" />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="49.0" prefWidth="159.0" text="Name of the User">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" layoutX="150.0" layoutY="186.0" prefHeight="247.0" prefWidth="440.0">
+               <children>
+                  <HBox prefHeight="33.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="125.0" text="Department">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox prefHeight="26.0" prefWidth="228.0">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="146.0" text="Semester">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox prefHeight="26.0" prefWidth="226.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="144.0" text="Section">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox prefHeight="26.0" prefWidth="231.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="145.0" text="Course">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox prefHeight="26.0" prefWidth="261.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+            <Button layoutX="291.0" layoutY="403.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="209.0" text="SUBMIT" />
+            <Label layoutX="12.0" layoutY="124.0" prefHeight="63.0" prefWidth="835.0" text="Please select the required options to view/edit the attendance of a specific class of a class" textFill="#33bc3c" wrapText="true">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="college.Admin_homepageController">
+   <children>
+      <SplitPane dividerPositions="0.22044088176352705" orientation="VERTICAL" prefHeight="501.0" prefWidth="849.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="230.0" prefWidth="847.0">
+               <children>
+                  <HBox layoutY="-3.0" prefHeight="84.0" prefWidth="847.0" spacing="200.0">
+                     <children>
+                        <VBox prefHeight="70.0" prefWidth="388.0">
+                           <children>
+                              <Label fx:id="welcomeLabel" alignment="CENTER" prefHeight="57.0" prefWidth="409.0" text="Welcome to XXXX Management System" textFill="#ee1818" textOverrun="CLIP">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="26.0" prefWidth="57.0" text="Home">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="-5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="84.0" prefWidth="297.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="35.0" prefWidth="96.0" text="Hello,">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="6.5" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="userNameLabel" prefHeight="49.0" prefWidth="159.0" text="Name of the User">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="847.0">
+               <children>
+                  <GridPane layoutX="13.0" layoutY="64.0" prefHeight="226.0" prefWidth="825.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="studentButton" mnemonicParsing="false" onAction="#studentButtonPushed" prefHeight="122.0" prefWidth="291.0" text="STUDENTS" />
+                        <Button fx:id="staffButton" mnemonicParsing="false" onAction="#staffButtonPushed" prefHeight="122.0" prefWidth="291.0" text="STAFF" GridPane.columnIndex="1" />
+                        <Button fx:id="coursesButton" mnemonicParsing="false" onAction="#coursesButtonPushed" prefHeight="122.0" prefWidth="291.0" text="COURSES" GridPane.columnIndex="2" />
+                        <Button fx:id="examButton" mnemonicParsing="false" onAction="#examButtonPushed" prefHeight="122.0" prefWidth="291.0" text="EXAMS" GridPane.rowIndex="1" />
+                        <Button fx:id="marksButton" mnemonicParsing="false" onAction="#marksButtonPushed" prefHeight="122.0" prefWidth="291.0" text="MARKS" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="attendanceButton" mnemonicParsing="false" onAction="#attendanceButtonPushed" prefHeight="122.0" prefWidth="291.0" text="ATTENDANCE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="studentCourseRegistButton" mnemonicParsing="false" onAction="#studentCoureseRegistButtonPushed" prefHeight="122.0" prefWidth="291.0" text="STUDENT COURSE REGISTRATION" GridPane.rowIndex="2" />
+                        <Button fx:id="staffCourseRegistButton" mnemonicParsing="false" onAction="#staffCoureseRegistButtonPushed" prefHeight="122.0" prefWidth="291.0" text="STAFF COURSE REGISTRATION" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="backButton" layoutX="392.0" layoutY="329.0" mnemonicParsing="false" onAction="#backButtonPushed" text="BACK" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

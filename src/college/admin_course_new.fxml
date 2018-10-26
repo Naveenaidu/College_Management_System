@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="college.Admin_course_newController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0">
+         <children>
+            <HBox layoutX="7.0" layoutY="9.0" prefHeight="64.0" prefWidth="845.0" spacing="200.0">
+               <children>
+                  <VBox prefHeight="70.0" prefWidth="388.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="409.0" text="ADD NEW COURSE" textFill="#ee1818" textOverrun="CLIP">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="Home">
+                           <VBox.margin>
+                              <Insets left="20.0" top="-5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="84.0" prefWidth="297.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="35.0" prefWidth="96.0" text="Hello,">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="6.5" />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="49.0" prefWidth="159.0" text="Name of the User">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Pane layoutX="13.0" layoutY="108.0" prefHeight="412.0" prefWidth="824.0">
+               <children>
+                  <VBox layoutX="26.0" layoutY="44.0" prefHeight="364.0" prefWidth="411.0">
+                     <children>
+                        <HBox prefHeight="55.0" prefWidth="351.0">
+                           <children>
+                              <Label text="NAME">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField prefHeight="38.0" prefWidth="274.0" promptText="Enter the name">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="55.0" prefWidth="351.0">
+                           <children>
+                              <Label text="Title">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField prefHeight="38.0" prefWidth="274.0" promptText="Enter the title of course">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="65.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="55.0" prefWidth="351.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="106.0" text="DNAME">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField prefHeight="38.0" prefWidth="274.0" promptText="Enter the department name">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="55.0" prefWidth="351.0">
+                           <children>
+                              <Label text="Credits">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField prefHeight="38.0" prefWidth="274.0" promptText="Enter the credits">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="34.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button layoutX="519.0" layoutY="25.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="205.0" text="SAVE" />
+                  <Button layoutX="521.0" layoutY="142.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="205.0" text="CLEAR" />
+                  <Button layoutX="524.0" layoutY="257.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="205.0" text="BACK" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
