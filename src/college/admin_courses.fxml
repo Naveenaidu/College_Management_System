@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="college.Admin_coursesController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="college.Admin_coursesController">
    <children>
       <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0">
          <children>
@@ -25,7 +24,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="Home">
+                        <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="26.0" prefWidth="57.0" text="Home">
                            <VBox.margin>
                               <Insets left="20.0" top="-5.0" />
                            </VBox.margin>
@@ -63,19 +62,19 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="183.0" prefWidth="254.0" text="ADD NEW COURSE">
+                  <Button fx:id="newCoursesButton" mnemonicParsing="false" onAction="#newCoursesButtonPushed" prefHeight="183.0" prefWidth="254.0" text="ADD NEW COURSE">
                      <GridPane.margin>
                         <Insets left="7.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="183.0" prefWidth="254.0" text="MANAGE COURSES" GridPane.columnIndex="1">
+                  <Button fx:id="manageCoursesButton" mnemonicParsing="false" onAction="#manageCoursesButtonPushed" prefHeight="183.0" prefWidth="254.0" text="MANAGE COURSES" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="50.0" />
                      </GridPane.margin>
                   </Button>
                </children>
             </GridPane>
-            <Button layoutX="373.0" layoutY="423.0" mnemonicParsing="false" text="BACK" />
+            <Button fx:id="backButton" layoutX="373.0" layoutY="423.0" mnemonicParsing="false" onAction="#backButtonPushed" text="BACK" />
          </children>
       </AnchorPane>
    </children>

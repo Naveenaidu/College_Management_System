@@ -42,7 +42,7 @@ public class Admin_studentController implements Initializable {
             
         window.setScene(adminHomeScene);
         window.show();
-    }
+    }    
     
     // Home Button Pushed
     public void homeButtonPushed(ActionEvent event) throws IOException{

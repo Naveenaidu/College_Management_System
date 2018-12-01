@@ -11,17 +11,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="college.Admin_course_editController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="college.Admin_course_editController">
    <children>
       <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0">
          <children>
             <AnchorPane layoutX="569.0" layoutY="8.0" prefHeight="159.0" prefWidth="287.0">
                <children>
-                  <Button layoutX="12.0" layoutY="18.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="UPDATE" />
-                  <Button layoutX="15.0" layoutY="58.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="DELETE" />
-                  <Button layoutX="164.0" layoutY="59.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="BACK" />
-                  <Button layoutX="160.0" layoutY="16.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="Home" />
+                  <Button fx:id="updateButton" layoutX="12.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateButtonPushed" prefHeight="33.0" prefWidth="113.0" text="UPDATE" />
+                  <Button fx:id="deleteButton" layoutX="15.0" layoutY="58.0" mnemonicParsing="false" onAction="#deleteButtonPushed" prefHeight="33.0" prefWidth="113.0" text="DELETE" />
+                  <Button fx:id="backButton" layoutX="164.0" layoutY="59.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="33.0" prefWidth="113.0" text="BACK" />
+                  <Button fx:id="homeButton" layoutX="160.0" layoutY="16.0" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="33.0" prefWidth="113.0" text="Home" />
                </children>
             </AnchorPane>
             <HBox layoutX="13.0" layoutY="29.0" prefHeight="62.0" prefWidth="564.0">
@@ -35,7 +34,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="cidTextField">
                                  <HBox.margin>
                                     <Insets left="20.0" />
                                  </HBox.margin>
@@ -49,7 +48,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="dnameTextField">
                                  <HBox.margin>
                                     <Insets left="20.0" />
                                  </HBox.margin>
@@ -67,7 +66,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="titleTextField">
                                  <HBox.margin>
                                     <Insets left="-10.0" />
                                  </HBox.margin>
@@ -81,7 +80,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="creditsTextField">
                                  <HBox.margin>
                                     <Insets left="29.0" />
                                  </HBox.margin>
@@ -95,16 +94,16 @@
                   <Insets top="-5.0" />
                </padding>
             </HBox>
-            <TableView layoutX="17.0" layoutY="139.0" prefHeight="347.0" prefWidth="816.0">
+            <TableView fx:id="tableCourses" layoutX="17.0" layoutY="139.0" onMouseClicked="#tableCourse_MouseClicked" prefHeight="347.0" prefWidth="816.0">
                <columns>
-                  <TableColumn prefWidth="32.66667175292969" text="C1" />
-                  <TableColumn prefWidth="172.0" text="CID" />
-                  <TableColumn prefWidth="298.0000305175781" text="Title" />
-                  <TableColumn prefWidth="192.99996948242188" text="Dname" />
-                  <TableColumn prefWidth="120.0" text="Credits" />
+                  <TableColumn fx:id="columnPointer" prefWidth="32.66667175292969" text="C1" />
+                  <TableColumn fx:id="columnCid" prefWidth="172.0" text="CID" />
+                  <TableColumn fx:id="columnTitle" prefWidth="298.0000305175781" text="Title" />
+                  <TableColumn fx:id="columnDname" prefWidth="192.99996948242188" text="Dname" />
+                  <TableColumn fx:id="columnCredits" prefWidth="106.6666259765625" text="Credits" />
                </columns>
             </TableView>
-            <Button layoutX="227.0" layoutY="92.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="CLEAR" />
+            <Button fx:id="clearButton" layoutX="227.0" layoutY="92.0" mnemonicParsing="false" onAction="#clearButtonPushed" prefHeight="33.0" prefWidth="113.0" text="CLEAR" />
          </children>
       </AnchorPane>
    </children>

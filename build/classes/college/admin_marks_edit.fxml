@@ -11,18 +11,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="college.Admin_marks_editController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="college.Admin_marks_editController">
    <children>
       <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0">
          <children>
             <AnchorPane layoutX="569.0" layoutY="8.0" prefHeight="159.0" prefWidth="287.0">
                <children>
-                  <Button layoutX="80.0" layoutY="106.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="Home" />
-                  <Button layoutX="12.0" layoutY="18.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="UPDATE" />
-                  <Button layoutX="15.0" layoutY="58.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="DELETE" />
-                  <Button layoutX="150.0" layoutY="62.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="BACK" />
-                  <Button layoutX="149.0" layoutY="18.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="113.0" text="CLEAR" />
+                  <Button fx:id="homeButton" layoutX="80.0" layoutY="106.0" mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="33.0" prefWidth="113.0" text="Home" />
+                  <Button fx:id="updateButton" layoutX="12.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateButtonPushed" prefHeight="33.0" prefWidth="113.0" text="UPDATE" />
+                  <Button fx:id="deleteButton" layoutX="15.0" layoutY="58.0" mnemonicParsing="false" onAction="#deleteButtonPushed" prefHeight="33.0" prefWidth="113.0" text="DELETE" />
+                  <Button fx:id="backButton" layoutX="150.0" layoutY="62.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="33.0" prefWidth="113.0" text="BACK" />
+                  <Button fx:id="clearButton" layoutX="149.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearButtonPushed" prefHeight="33.0" prefWidth="113.0" text="CLEAR" />
                </children>
             </AnchorPane>
             <HBox layoutX="13.0" layoutY="29.0" prefHeight="127.0" prefWidth="564.0">
@@ -36,7 +35,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="nameTextField">
                                  <HBox.margin>
                                     <Insets left="20.0" />
                                  </HBox.margin>
@@ -50,7 +49,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="usnTextField">
                                  <HBox.margin>
                                     <Insets left="20.0" />
                                  </HBox.margin>
@@ -64,7 +63,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="courseTextField">
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin>
@@ -78,7 +77,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="deptTextField">
                                  <HBox.margin>
                                     <Insets left="20.0" />
                                  </HBox.margin>
@@ -96,7 +95,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="t1TextField">
                                  <HBox.margin>
                                     <Insets left="-10.0" />
                                  </HBox.margin>
@@ -110,7 +109,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="t2TextField">
                                  <HBox.margin>
                                     <Insets left="29.0" />
                                  </HBox.margin>
@@ -124,7 +123,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="t3TextField">
                                  <HBox.margin>
                                     <Insets left="29.0" />
                                  </HBox.margin>
@@ -138,7 +137,7 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
-                              <TextField>
+                              <TextField fx:id="totalTextField">
                                  <HBox.margin>
                                     <Insets left="29.0" />
                                  </HBox.margin>
@@ -152,16 +151,17 @@
                   <Insets top="-5.0" />
                </padding>
             </HBox>
-            <TableView layoutX="17.0" layoutY="172.0" prefHeight="314.0" prefWidth="816.0">
+            <TableView fx:id="MarksTable" layoutX="17.0" layoutY="172.0" prefHeight="314.0" prefWidth="816.0">
                <columns>
                   <TableColumn prefWidth="32.66667175292969" text="C1" />
-                  <TableColumn prefWidth="107.66667175292969" text="USN" />
-                  <TableColumn prefWidth="153.0" text="Name" />
-                  <TableColumn prefWidth="307.66668701171875" text="Course" />
-                  <TableColumn prefWidth="56.33331298828125" text="T1" />
-                  <TableColumn prefWidth="37.0" text="T2" />
-                  <TableColumn prefWidth="55.0" text="T3" />
-                  <TableColumn prefWidth="66.33331298828125" text="TOTAL" />
+                  <TableColumn fx:id="columnUsn" prefWidth="107.66667175292969" text="USN" />
+                  <TableColumn fx:id="columnName" prefWidth="153.0" text="Name" />
+                  <TableColumn fx:id="columnDept" maxWidth="100.0" minWidth="2.0" prefWidth="250.33331298828125" text="Dept" />
+                  <TableColumn fx:id="columnCourse" prefWidth="124.66668701171875" text="Course" />
+                  <TableColumn fx:id="columnT1" prefWidth="105.33331298828125" text="T1" />
+                  <TableColumn fx:id="columnT2" prefWidth="34.66668701171875" text="T2" />
+                  <TableColumn fx:id="columnT3" prefWidth="47.0" text="T3" />
+                  <TableColumn fx:id="columnTotal" minWidth="2.33331298828125" prefWidth="93.66668701171875" text="TOTAL" />
                </columns>
             </TableView>
          </children>

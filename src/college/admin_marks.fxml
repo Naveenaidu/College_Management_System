@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="college.Admin_marksController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="college.Admin_marksController">
    <children>
       <HBox prefHeight="84.0" prefWidth="847.0" spacing="200.0">
          <children>
@@ -21,7 +20,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="Home">
+                  <Button mnemonicParsing="false" onAction="#homeButtonPushed" prefHeight="26.0" prefWidth="57.0" text="Home">
                      <VBox.margin>
                         <Insets left="20.0" top="-5.0" />
                      </VBox.margin>
@@ -59,31 +58,11 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <ChoiceBox prefHeight="26.0" prefWidth="228.0">
+                  <ChoiceBox fx:id="dnameChoiceBox" prefHeight="26.0" prefWidth="228.0">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
                   </ChoiceBox>
-               </children>
-            </HBox>
-            <HBox prefHeight="33.0" prefWidth="271.0">
-               <children>
-                  <Label prefHeight="24.0" prefWidth="146.0" text="Semester">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Label>
-                  <ChoiceBox prefHeight="26.0" prefWidth="226.0" />
-               </children>
-            </HBox>
-            <HBox prefHeight="33.0" prefWidth="271.0">
-               <children>
-                  <Label prefHeight="24.0" prefWidth="144.0" text="Section">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Label>
-                  <ChoiceBox prefHeight="26.0" prefWidth="231.0" />
                </children>
             </HBox>
             <HBox prefHeight="33.0" prefWidth="271.0">
@@ -93,7 +72,27 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <ChoiceBox prefHeight="26.0" prefWidth="261.0" />
+                  <ChoiceBox fx:id="courseChoiceBox" prefHeight="26.0" prefWidth="261.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="33.0" prefWidth="271.0">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="146.0" text="Semester">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="semesterChoiceBox" prefHeight="26.0" prefWidth="226.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="33.0" prefWidth="271.0">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="144.0" text="Section">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="sectionChoiceBox" prefHeight="26.0" prefWidth="231.0" />
                </children>
             </HBox>
          </children>
@@ -101,7 +100,7 @@
             <Insets left="20.0" />
          </padding>
       </VBox>
-      <Button layoutX="291.0" layoutY="403.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="209.0" text="SUBMIT" />
+      <Button layoutX="291.0" layoutY="403.0" mnemonicParsing="false" onAction="#submitButtonPushed" prefHeight="63.0" prefWidth="209.0" text="SUBMIT" />
       <Label layoutX="44.0" layoutY="124.0" prefHeight="63.0" prefWidth="736.0" text="Please select the required options to view/edit the marks of a specific class" textFill="#33bc3c">
          <font>
             <Font size="19.0" />
